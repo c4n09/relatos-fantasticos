@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatos Fantasticos</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <div class="contenedor-descriptor">
+        <p id="descripcion">En estos relatos se presentan hechos sobrenaturales que no tienen una explicación alguna, 
+            es decir, no tienen una explicación lógica, ni para el lector ni para los personajes. Esto 
+            genera una sensación de duda o vacilación frente a los hechos. La interpretación será tarea del lector.
+        </p>
+        <button id="btn-leer" class="btn-leer">Leer</button>
+        <button id="btn-stop" class="btn-stop">Stop</button>
+        <div class="contenedor-imagenes">
+            <div id="imagen1"></div>
+            <div id="imagen2"></div>
+            <div id="imagen3"></div>
+        </div>
+        
+    </div>
+    <script>
+        const btnLeer = document.getElementById('btn-leer');
+        const btnStop = document.getElementById('btn-stop');
+
+        const speech = window.speechSynthesis;
+            speech.volume = 1;
+            speech.rate = 0.7;
+            speech.pitch = 0.5;
+
+            const utter = new SpeechSynthesisUtterance();
+
+        btnLeer.addEventListener('click', function(){
+            
+            const descripcion = document.getElementById('descripcion').innerText;
+
+            console.log(descripcion);
+            utter.text = descripcion;
+            speech.speak(utter);
+
+            var uno = setTimeout(() => {
+                document.getElementById("imagen1").innerHTML ='<img src="../imagenes/Cuento fantástico.jpg" class="imagen-rf">';
+            }, 5000);
+            var dos = setTimeout(() => {
+                document.getElementById("imagen2").innerHTML ='<img src="../imagenes/images.jpg" class="imagen-rf">';
+            }, 8000);
+            var tres = setTimeout(() => {
+                document.getElementById("imagen3").innerHTML ='<img src="../imagenes/fanta.jpg" class="imagen-rf">';
+            }, 11000);
+        });
+        btnStop.addEventListener('click', function(){
+            speech.cancel();
+        })
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autores</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <div class="contenedor-autor">
+        <p class="titulo-autor" id="titulo-autor"></p>
+        <p class="autor" id="autor1"></p>
+        <p class="autor" id="autor2"></p>
+    </div>
+    <script>
+        let titulo_autor = "Julio Cortazar y Silvina Ocampo";
+        let autor1 = "Julio Cortázar publicó decenas de cuentos fantásticos, en los que exploró variados temas y escenarios posibles. dio pautas para pensar de qué manera la incertidumbre se puede hacer presente en todos los momentos de nuestra vida. A esa sensación la llamó “extrañamiento” y puede ocurrir en cualquier momento y en cualquier lugar.";
+        let autor2 = "Silvina Ocampo es considerada una de las grandes representantes de la literatura fantástica argentina y en sus relatos aborda las relaciones personales entre las mujeres y su entorno, atravesadas por hechos sobrenaturales. En sus historias, no solamente exploran los límites de lo racional en los hechos y acontecimientos, sino también el vínculo entre la naturaleza y lo humano, el rol de las mujeres en la sociedad, los mandatos sociales y familiares, entre otros temas de la actualidad.";
+    
+        let cadena1 = titulo_autor.split('');
+        let cadena2 = autor1.split('');
+        let cadena3 = autor2.split('');
+        console.log(cadena1);
+        console.log(cadena2);
+        console.log(cadena3);
+
+        let contador1 = 0;
+        let contador2 = 0;
+        let contador3 = 0;
+
+        var frase1 = setInterval(escribir1, 100);
+        var frase2 = '';
+        var frase3 = '';
+
+        function escribir1(){
+            if (contador1 < cadena1.length){
+                document.getElementById('titulo-autor').innerHTML += cadena1[contador1];
+                contador1 = contador1 + 1;
+            }
+            else if(contador1 == cadena1.length){
+                clearInterval(frase1);
+                frase2 = setInterval(escribir2,100);
+            }
+
+        }
+        function escribir2(){
+            if (contador2 < cadena2.length){
+                if( contador2 >=0 && contador2 < 14){
+                    document.getElementById('autor1').innerHTML += '<b>'+cadena2[contador2]+'</b>';
+                    contador2 = contador2 + 1;
+                }
+                else{
+                    document.getElementById('autor1').innerHTML += cadena2[contador2];
+                    contador2 = contador2 + 1;
+                }
+            }
+            else{
+                clearInterval(frase2);
+                frase3 = setInterval (escribir3,100);
+            }
+
+        }
+        function escribir3(){
+            if (contador3 < cadena3.length){
+                if( contador3 >=0 && contador3 < 14){
+                    document.getElementById('autor2').innerHTML += '<b>'+cadena3[contador3]+'</b>';
+                    contador3 = contador3 + 1;
+                }
+                else{
+                    document.getElementById('autor2').innerHTML += cadena3[contador3];
+                    contador3 = contador3 + 1;
+                }
+            }
+            else{
+                clearInterval(frase3);
+            }
+
+        }
+
+    </script>
+</body>
+</html>

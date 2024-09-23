@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temas de relatos fantasticos</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+   <div class="contenedor-temas-rf">
+        <ul>
+            <li><p id="parrafo1"></p></li>
+            <li><p id="parrafo2"></p></li>
+            <li><p id="parrafo3"></p></li>
+            <li><p id="parrafo4"></p></li>
+            <li><p id="parrafo5"></p></li>
+        </ul>
+   </div> 
+   <script>
+        let parrafo1 = 'Seres de otro mundo: aparecen fantasmas o  seres monstruosos que no pertenecen a nuestro mundo y cuya naturaleza se desconoce.';
+        let parrafo2 = 'Doble: se trata de la duplicación de personajes.';
+        let parrafo3 = 'Transformaciones: también conocidas como metamorfosis, se produce cuando un personaje cambia su forma sin que medie un hechizo ni un procedimiento científico.';
+        let parrafo4 = 'Mundo de los sueños: pueden aparecer sueños proféticos, mezcla entre el sueño y la vigilia, elementos oníricos en la vida cotidiana.';
+        let parrafo5 = 'Ruptura del tiempo y el espacio: se produce el quiebre de tiempo y espacio.';
+
+        let cadena1 = parrafo1.split('');
+        let cadena2 = parrafo2.split('');
+        let cadena3 = parrafo3.split('');
+        let cadena4 = parrafo4.split('');
+        let cadena5 = parrafo5.split('');
+        //console.log(cadena2)
+
+        let contador1 = 0;
+        let contador2 = 0;
+        let contador3 = 0;
+        let contador4 = 0;
+        let contador5 = 0;
+
+        let tiempo1 = setInterval(escribir1, 90);
+        let tiempo2 = '';
+        let tiempo3 = '';
+        let tiempo4 = '';
+        let tiempo5 = '';
+
+        function escribir1(){
+    
+            if(contador1 >= 0 && contador1 < 20){
+                document.getElementById('parrafo1').innerHTML += '<b class="color">' +cadena1[contador1]+'</b>';
+                contador1 = contador1 + 1;
+            }else{
+                document.getElementById('parrafo1').innerHTML += cadena1[contador1];
+                contador1 = contador1 + 1;
+            }
+            if(contador1 == cadena1.length){    
+                clearInterval(tiempo1);
+                tiempo2 = setInterval(escribir2, 80);
+            }
+        }
+        
+        function escribir2(){
+            if(contador2 >= 0 && contador2 < 6){
+                document.getElementById('parrafo2').innerHTML += '<b class="color">' +cadena2[contador2]+'</b>';
+                contador2 = contador2 + 1;
+            }else{
+                document.getElementById('parrafo2').innerHTML += cadena2[contador2];
+                contador2 = contador2 + 1;
+            }
+            if(contador2 == cadena2.length){    
+                clearInterval(tiempo2);
+                tiempo3 = setInterval(escribir3, 80);
+            }
+        }
+        function escribir3(){
+            if(contador3 >= 0 && contador3 < 18){
+                document.getElementById('parrafo3').innerHTML += '<b class="color">' +cadena3[contador3]+'</b>';
+                contador3 = contador3 + 1;
+            }else{
+                document.getElementById('parrafo3').innerHTML += cadena3[contador3];
+                contador3 = contador3 + 1;
+            }
+            if(contador3 == cadena3.length){    
+                clearInterval(tiempo3);
+                tiempo4 = setInterval(escribir4, 80);
+            }
+        }
+        function escribir4(){
+            if(contador4 >= 0 && contador4 < 21){
+                document.getElementById('parrafo4').innerHTML += '<b class="color">' +cadena4[contador4]+'</b>';
+                contador4 = contador4 + 1;
+            }else{
+                document.getElementById('parrafo4').innerHTML += cadena4[contador4];
+                contador4 = contador4 + 1;
+            }
+            if(contador4 == cadena4.length){    
+                clearInterval(tiempo4);
+                tiempo5 = setInterval(escribir5, 80);
+            }
+        }
+        function escribir5(){
+            if(contador5 >= 0 && contador5 < 33){
+                document.getElementById('parrafo5').innerHTML += '<b class="color">' +cadena5[contador5]+'</b>';
+                contador5 = contador5 + 1;
+            }else{
+                document.getElementById('parrafo5').innerHTML += cadena5[contador5];
+                contador5 = contador5 + 1;
+            }
+            if(contador5 == cadena5.length){    
+                clearInterval(tiempo5);
+            }
+        }
+   </script>
+</body>
+</html>

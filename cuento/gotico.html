@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Literatura gotica y terror fantastico</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+
+</head>
+<body></body>
+    <div class="contenedor-gotico">
+        <p id="descripcion"></p> 
+    </div>
+<script>
+    let descripcion = 'Para rastrear los orígenes de la literatura fantástica, algunos autores se remontan al siglo XVIII, con el comienzo de la literatura gótica. En esta, la incertidumbre generada por los acontecimientos de la época buscaba producir terror en los lectores. Los hechos sobrenaturales sin explicación racional están vinculados con lo monstruoso y lo sangriento; estos generan en el lector suspenso y sensación de intranquilidad.';
+
+    let cadena = descripcion.split('');
+    console.log(cadena)
+
+    let contador = 0;
+
+    let tiempo = setInterval(escribir, 90);
+
+    function escribir(){
+    
+    if(contador >= 356 && contador < 421){
+        document.getElementById('descripcion').innerHTML += '<b class="colorrrrr">' +cadena[contador]+'</b>';
+        contador = contador + 1;
+    }else if(contador >= 55 && contador < 98){
+        document.getElementById('descripcion').innerHTML += '<b class="colorrrrrr">' +cadena[contador]+'</b>';
+        contador = contador + 1;
+    }else{
+        document.getElementById('descripcion').innerHTML += cadena[contador];
+        contador = contador + 1;
+    }
+    if(contador == cadena.length){    
+        clearInterval(tiempo);
+    }
+}
+
+</script>
+</body>
+</html>

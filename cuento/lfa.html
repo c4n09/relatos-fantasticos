@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Literatura fantastica argentina</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <div class="contenedor-argentina">
+        <p id="descripcion1"></p> 
+        <p id="descripcion2"></p>
+    </div>
+<script>
+    let descripcion1 = 'La literatura fantástica tuvo un amplio desarrollo en la literatura argentina durante el siglo XX. Autores como: Leopoldo Lugones, Jorge Luis Borges, Silvina Ocampo, Julio Cortázar, Enrique Anderson Imbert, entre otros, desarrollaron este género en la cultura argentina.';
+    let descripcion2 = 'Muchos de ellos fueron reconocidos universalmente por su literatura, debido a los temas abordados y la importancia dada a lo sobrenatural en la vida cotidiana.'
+
+    let cadena1 = descripcion1.split('');
+    let cadena2 = descripcion2.split('');
+
+    let contador1 = 0;
+    let contador2 = 0;
+
+    let tiempo1 = setInterval(escribir1, 90);
+    let tiempo2 = '';
+
+    function escribir1(){
+    
+    if(contador1 >= 0 && contador1 < 25){
+        document.getElementById('descripcion1').innerHTML += '<b class="color">' +cadena1[contador1]+'</b>';
+        contador1 = contador1 + 1;
+    }else{
+        document.getElementById('descripcion1').innerHTML += cadena1[contador1];
+        contador1 = contador1 + 1;
+    }
+    if(contador1 == cadena1.length){    
+        clearInterval(tiempo1);
+        tiempo2 = setInterval(escribir2, 80);
+    }
+}
+
+function escribir2(){
+    if(contador2 < cadena2.length){
+        document.getElementById('descripcion2').innerHTML += cadena2[contador2];
+        contador2 = contador2 + 1;
+    }
+    if(contador2 == cadena2.length){    
+        clearInterval(tiempo2);
+    }
+}
+</script>
+</body>
+</html>

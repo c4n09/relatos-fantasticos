@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap');
+.contenedor-descriptor{
+    background-color:lightblue;
+    border: 2px solid black;
+    padding: 5px;
+    font-size: 20px;
+    font-family: "Platypi", serif;
+}
+.btn-leer{
+    width: 90px;
+    height: 40px;
+    background-color:#34cd44;
+    box-shadow: 3px 3px;
+    border-radius: 5px 5px;
+    font-weight: bolder;
+}
+.btn-leer:hover{
+    width: 90px;
+    height: 40px;
+    background-color:#2ba238;
+    box-shadow: 3px 3px;
+    border-radius: 5px 5px;
+    font-weight: bolder;
+}
+.btn-stop{
+    width: 90px;
+    height: 40px;
+    background-color:firebrick;
+    box-shadow: 3px 3px;
+    border-radius: 5px 5px;
+    font-weight: bolder;
+}
+.btn-stop:hover{
+    width: 90px;
+    height: 40px;
+    background-color:darkred;
+    box-shadow: 3px 3px;
+    border-radius: 5px 5px;
+    font-weight: bolder;
+}
+.imagen{
+    width: 400px;
+    height: 250px;
+    border: 2px solid lightseagreen;
+    border-radius: 5px 5px 15px 15px;
+    animation-name: slide;
+    animation-duration: 2s;
+}
+.contenedor-imagenes{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.especial{
+    color: darkblue;
+    font-size: 20px;
+}
+.contenedor-caracteristicas{
+    background-color: lightsteelblue;
+    min-height: 180px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.color{
+    color: darkgreen;
+    font-size: 20px;
+}
+.contenedor-temas-rf{
+    background-color: lightyellow;
+    min-height: 260px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.colorr{
+    color: rgb(37, 107, 112);
+    font-size: 20px;
+}
+.colorrrr{
+    color: rgb(6, 39, 110);
+    font-size: 20px;
+}
+.colorrrrr{
+    color: rgb(190, 7, 7);
+    font-size: 20px;
+}
+.colorrrrrr{
+    color: rgb(99, 2, 2);
+    font-size: 20px;
+}
+.contenedor-nucleo-narrativo{
+    background-color: rgb(255, 204, 204);
+    min-height: 230px;
+    border: 2px solid black;
+    border-radius: 7px;
+    padding: 7px;
+}
+.nucleo-parrafo{
+    margin: 0;
+}
+.acciones ul{
+    margin: 0;
+}
+.colorrr{
+    color: rgb(114, 59, 177);
+    font-size: 20px;
+}
+.contenedor-detonante-climax{
+    background-color: rgb(243, 209, 252);
+    min-height: 200px;
+    border: 2px solid black;
+    border-radius: 7px;
+    padding: 7px;
+}
+.detonante-parrafo{
+    margin: 0;
+}
+.contenedor-argentina{
+    background-color: rgb(164, 221, 159);
+    min-height: 150px;
+    border: 2px solid black;
+    border-radius: 7px;
+    padding: 7px;
+}
+.contenedor-menu{
+    padding: 5px;
+    display: grid;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.rf{
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: rgb(235, 34, 20);
+    border: 1px solid rgb(92, 0, 0);
+    color: rgb(253, 253, 253);
+    font-weight: bold;
+    transition: 0.2s;
+}
+.rf:hover{
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: rgb(206, 14, 14);
+    border: 2px solid darkred;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transform: scale(1.05);
+}
+.caracteristicas{
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: rgb(80, 91, 255);
+    border: 1px solid rgb(37, 77, 255);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: 0.2s;
+}
+.caracteristicas:hover{
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: rgb(3, 31, 189);
+    border: 2px solid rgb(37, 77, 255);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transform: scale(1.05);
+}
+.temas{
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: rgb(53, 165, 58);
+    border: 1px solid rgb(56, 155, 61);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: 0.2s;
+}
+.temas:hover{
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: rgb(19, 122, 24);
+    border: 2px solid rgb(56, 155, 61);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transform: scale(1.05);
+}
+.nucleo{
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: rgb(255, 174, 81);
+    border: 1px solid rgb(207, 128, 53);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: 0.2s;
+}
+.nucleo:hover{
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: rgb(218, 127, 23);
+    border: 2px solid rgb(207, 128, 53);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transform: scale(1.05);
+}
+.dyc{
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: rgb(159, 70, 243);
+    border: 1px solid rgb(84, 27, 158);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: 0.2s;
+}
+.dyc:hover{
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: rgb(123, 26, 233);
+    border: 2px solid rgb(84, 27, 158);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transform: scale(1.05);
+}
+.lfa{
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: rgb(67, 176, 219);
+    border: 1px solid rgb(24, 100, 119);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: 0.2s;
+}
+.lfa:hover{
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: rgb(19, 137, 167);
+    border: 2px solid rgb(24, 100, 119);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transform: scale(1.05);
+}
+.autores{
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: rgb(245, 140, 70);
+    border: 1px solid rgb(102, 60, 20);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: 0.2s;
+}
+.autores:hover{
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: rgb(196, 98, 6);
+    border: 2px solid rgb(102, 60, 20);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transform: scale(1.05);
+}
+.contenedor-autor .titulo-autor{
+    background-color: cornflowerblue;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    width: 210px;
+    box-shadow: 3px 3px rgb(128, 128, 128);
+}
+.contenedor-autor .autor{
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    text-shadow: 1px 1px rgb(0, 0, 0);
+    background-color: cornflowerblue;
+    color: white;
+}
+.caracteristicas_g{
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: rgb(245, 107, 233);
+    border: 1px solid rgb(91, 23, 94);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: 0.2s;
+}
+.caracteristicas_g:hover{
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: rgb(184, 64, 214);
+    border: 2px solid rgb(91, 23, 94);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transform: scale(1.05);
+}
+.contenedor-caracteristicas_g{
+    background-color: rgb(101, 73, 145);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    width: 800px;
+    box-shadow: 3px 3px rgb(128, 128, 128);
+}
+.gotico{
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: rgb(212, 11, 105);
+    border: 1px solid rgb(100, 14, 54);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: 0.2s;
+}
+.gotico:hover{
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: rgb(156, 6, 111);
+    border: 2px solid rgb(100, 14, 54);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transform: scale(1.05);
+}
+.contenedor-gotico{
+    background-color: rgb(130, 139, 190);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    width: 800px;
+    box-shadow: 3px 3px rgb(128, 128, 128);
+}
+.imagen-pastillas{
+    width: 200px;
+    height: 150px;
+    border: 2px solid lightseagreen;
+    border-radius: 5px 5px 15px 15px;
+    animation-name: slide;
+    animation-duration: 2s;
+}
+.contenedor-encabezado{
+    border: 3px solid black;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: rgb(148, 219, 221);
+}
+#titulo-imag{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+#imag1{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+#imag2{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+#imag3{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+#imag4{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+#imag5{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+#imag6{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+#imag7{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+#titulo{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bolder;
+    text-shadow: 3px 3px rgb(174, 174, 174);
+
+}
+.zombies{
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: rgb(98, 185, 57);
+    border: 1px solid rgb(54, 93, 31);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transition: 0.2s;
+}
+.zombies:hover{
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: rgb(73, 145, 0);
+    border: 2px solid rgb(54, 93, 31);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    transform: scale(1.05);
+}
+.imagen-rf{
+    width: 250px;
+    height: 200px;
+    border: 2px solid lightseagreen;
+    border-radius: 5px 5px 15px 15px;
+    animation-name: slide;
+    animation-duration: 2s;
+}
+@keyframes slide {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+@media screen and(max-width: 760px){
+    
+}

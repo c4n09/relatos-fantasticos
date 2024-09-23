@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caracteristicas</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+    <div class="contenedor-caracteristicas">
+        <ul>
+            <li><p id="parrafo1"></p></li>
+            <li><p id="parrafo2"></p></li>
+            <li><p id="parrafo3"></p></li>
+        </ul>
+    </div>
+    <script>
+        let parrafo1 = 'La narración suele comenzar en un marco realista, es decir, presenta los personajes, lugares y situaciones cotidianas que no salen de lo común.';
+        let parrafo2 = 'En este marco realista sucede la irrupción de un evento sobrenatural, por lo tanto el mundo cotidiano se ve interrumpido por una situación que sale de la lógica, por lo tanto que no tiene ninguna explicación.';
+        let parrafo3 = 'La lectura de cuentos fantásticos nos conduce a un estado de incertidumbre, es decir, sentimos que no entendemos qué sucedió.';
+
+        let cadena1 = parrafo1.split('');
+        let cadena2 = parrafo2.split('');
+        let cadena3 = parrafo3.split('');
+
+        let contador1 = 0;
+        let contador2 = 0;
+        let contador3 = 0;
+
+        let tiempo1 = setInterval(escribir1, 80);
+        let tiempo2 = '';
+        let tiempo3 = '';
+
+        function escribir1(){
+    
+            if(contador1 > 121 && contador1 < 142){
+                document.getElementById('parrafo1').innerHTML += '<b class="especial">' +cadena1[contador1]+'</b>';
+                contador1 = contador1 + 1;
+            }else{
+                document.getElementById('parrafo1').innerHTML += cadena1[contador1];
+                contador1 = contador1 + 1;
+            }
+            if(contador1 == cadena1.length){    
+                clearInterval(tiempo1);
+                tiempo2 = setInterval(escribir2, 80);
+            }
+        }
+        function escribir2(){
+            document.getElementById('parrafo2').innerHTML += cadena2[contador2];
+            contador2 = contador2 + 1;
+            if(contador2 == cadena2.length){
+                clearInterval(tiempo2);
+                tiempo3 = setInterval(escribir3, 80);
+            }
+        }
+        function escribir3(){
+            document.getElementById('parrafo3').innerHTML += cadena3[contador3];
+            contador3 = contador3 + 1;
+            if(contador3 == cadena3.length){
+                clearInterval(tiempo3);
+
+            }
+        }
+    </script>
+</body>
+</html>
